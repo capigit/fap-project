@@ -1,0 +1,20 @@
+| Jeu | Mode | Limite (s) | Statut | nbFreqDiff | maxFreq | Temps reel (s) |
+| --- | --- | --- | --- | --- | --- | --- |
+| original | feasible | 30 | ERROR | - | - | 0.01 |
+| original | feasible | 60 | ERROR | - | - | 0.01 |
+| original | feasible | 120 | ERROR | - | - | 0.01 |
+| small | feasible | 30 | ERROR | - | - | 0.01 |
+| small | feasible | 60 | ERROR | - | - | 0.01 |
+| small | feasible | 120 | ERROR | - | - | 0.01 |
+| medium | feasible | 30 | ERROR | - | - | 0.01 |
+| medium | feasible | 60 | ERROR | - | - | 0.01 |
+| medium | feasible | 120 | ERROR | - | - | 0.01 |
+| original | optimized | 30 | ERROR | - | - | 0.01 |
+| original | optimized | 60 | ERROR | - | - | 0.01 |
+| original | optimized | 120 | ERROR | - | - | 0.01 |
+| small | optimized | 30 | ERROR | - | - | 0.01 |
+| small | optimized | 60 | ERROR | - | - | 0.01 |
+| small | optimized | 120 | ERROR | - | - | 0.01 |
+| medium | optimized | 30 | ERROR | - | - | 0.01 |
+| medium | optimized | 60 | ERROR | - | - | 0.01 |
+| medium | optimized | 120 | ERROR | - | - | 0.01 |
