@@ -1,4 +1,4 @@
-const CSV_URL = "../results/experiments.csv";
+const CSV_URLS = ["../results/experiments.csv", "results/experiments.csv"];
 
 const stateRank = {
   OPTIMUM: 5,
@@ -256,21 +256,27 @@ function resetFilters() {
 }
 
 async function loadDefaultCsv() {
-  try {
-    const response = await fetch(CSV_URL, { cache: "no-store" });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    nodes.source.textContent = "results/experiments.csv";
-    resetFilters();
-    render(parseCsv(await response.text()));
-  } catch {
-    allRows = [];
-    nodes.caption.textContent = "Import manuel requis";
-    nodes.source.textContent = "Non chargé";
-    nodes.filterCount.textContent = "-";
-    nodes.banner.className = "state-banner warn";
-    nodes.banner.textContent =
-      "CSV non chargé automatiquement. Importe results/experiments.csv pour afficher les résultats.";
+  for (const url of CSV_URLS) {
+    try {
+      const response = await fetch(url, { cache: "no-store" });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      nodes.source.textContent = "results/experiments.csv";
+      resetFilters();
+      render(parseCsv(await response.text()));
+      return;
+    } catch {
+      // Try the next path. GitHub Pages serves the view at the site root,
+      // while local development can serve it from /view/.
+    }
   }
+
+  allRows = [];
+  nodes.caption.textContent = "Import manuel requis";
+  nodes.source.textContent = "Non chargé";
+  nodes.filterCount.textContent = "-";
+  nodes.banner.className = "state-banner warn";
+  nodes.banner.textContent =
+    "CSV non chargé automatiquement. Importe results/experiments.csv pour afficher les résultats.";
 }
 
 nodes.input.addEventListener("change", async (event) => {

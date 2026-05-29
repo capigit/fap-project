@@ -22,6 +22,8 @@ modélisé avec [PyCSP3](https://pycsp.org/) et le solveur ACE.
   - [Modèle faisable](#modèle-faisable)
   - [Modèle optimisé](#modèle-optimisé)
 - [Campagne expérimentale](#campagne-expérimentale)
+- [Visualisation](#visualisation)
+- [Déploiement GitHub Pages](#déploiement-github-pages)
 - [Modélisation](#modélisation)
 - [Référence](#référence)
 
@@ -57,6 +59,13 @@ fap-project/
 │   ├── modelSansOptimisation.py   # Modèle faisable (recherche rapide)
 │   ├── model.py                   # Modèle optimisé (minimisation)
 │   └── run_experiments.py         # Campagne expérimentale automatique
+├── view/
+│   ├── index.html            # Tableau de bord statique
+│   ├── styles.css
+│   ├── results.js
+│   └── favicon.svg
+├── .github/workflows/
+│   └── pages.yml             # Déploiement GitHub Pages
 ├── requirements.txt
 └── README.md
 ```
@@ -118,6 +127,38 @@ python3 src/run_experiments.py
 ```
 
 Résultats générés dans `results/experiments.csv` et `results/experiments.md`.
+
+Résultats actuels :
+
+| Modèle | original | small | medium |
+|---|---:|---:|---:|
+| Faisable | SAT, 100 fréquences | SAT, 32 fréquences | SAT, 75 fréquences |
+| Optimisé | TIMEOUT | TIMEOUT | TIMEOUT |
+
+---
+
+## Visualisation
+
+Le dossier `view/` contient un tableau de bord statique pour explorer les résultats :
+
+- métriques de synthèse ;
+- recherche et filtres par modèle/statut ;
+- lecture automatique de `results/experiments.csv` ;
+- import manuel d'un CSV depuis le navigateur.
+- favicon SVG pour l'icône de l'application.
+
+En local, servir le dépôt puis ouvrir `view/`.
+
+---
+
+## Déploiement GitHub Pages
+
+Le workflow `.github/workflows/pages.yml` publie automatiquement la vue à chaque push sur `main`.
+
+Dans GitHub, activer **Settings → Pages → Source: GitHub Actions**. Le workflow copie :
+
+- `view/index.html`, `view/styles.css`, `view/results.js` et `view/favicon.svg` à la racine du site ;
+- `results/experiments.csv` et `results/experiments.md` dans `results/`.
 
 ---
 
