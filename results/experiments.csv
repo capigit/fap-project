@@ -1,73 +1,19 @@
 dataset,time_limit,mode,status,nbFreqDiff,maxFreq,elapsed_s,return_code,stderr
-data/fap.json,30,feasible,ERROR,-,-,0.01,1,"Traceback (most recent call last):
-  File ""/home/alpha/Documents/project/fs_jeanPerrin/fap-project/src/modelSansOptimisation.py"", line 1, in <module>
-    from pycsp3 import *
-ModuleNotFoundError: No module named 'pycsp3'"
-data/fap.json,60,feasible,ERROR,-,-,0.01,1,"Traceback (most recent call last):
-  File ""/home/alpha/Documents/project/fs_jeanPerrin/fap-project/src/modelSansOptimisation.py"", line 1, in <module>
-    from pycsp3 import *
-ModuleNotFoundError: No module named 'pycsp3'"
-data/fap.json,120,feasible,ERROR,-,-,0.01,1,"Traceback (most recent call last):
-  File ""/home/alpha/Documents/project/fs_jeanPerrin/fap-project/src/modelSansOptimisation.py"", line 1, in <module>
-    from pycsp3 import *
-ModuleNotFoundError: No module named 'pycsp3'"
-data/fap_small.json,30,feasible,ERROR,-,-,0.01,1,"Traceback (most recent call last):
-  File ""/home/alpha/Documents/project/fs_jeanPerrin/fap-project/src/modelSansOptimisation.py"", line 1, in <module>
-    from pycsp3 import *
-ModuleNotFoundError: No module named 'pycsp3'"
-data/fap_small.json,60,feasible,ERROR,-,-,0.01,1,"Traceback (most recent call last):
-  File ""/home/alpha/Documents/project/fs_jeanPerrin/fap-project/src/modelSansOptimisation.py"", line 1, in <module>
-    from pycsp3 import *
-ModuleNotFoundError: No module named 'pycsp3'"
-data/fap_small.json,120,feasible,ERROR,-,-,0.01,1,"Traceback (most recent call last):
-  File ""/home/alpha/Documents/project/fs_jeanPerrin/fap-project/src/modelSansOptimisation.py"", line 1, in <module>
-    from pycsp3 import *
-ModuleNotFoundError: No module named 'pycsp3'"
-data/fap_medium.json,30,feasible,ERROR,-,-,0.01,1,"Traceback (most recent call last):
-  File ""/home/alpha/Documents/project/fs_jeanPerrin/fap-project/src/modelSansOptimisation.py"", line 1, in <module>
-    from pycsp3 import *
-ModuleNotFoundError: No module named 'pycsp3'"
-data/fap_medium.json,60,feasible,ERROR,-,-,0.01,1,"Traceback (most recent call last):
-  File ""/home/alpha/Documents/project/fs_jeanPerrin/fap-project/src/modelSansOptimisation.py"", line 1, in <module>
-    from pycsp3 import *
-ModuleNotFoundError: No module named 'pycsp3'"
-data/fap_medium.json,120,feasible,ERROR,-,-,0.01,1,"Traceback (most recent call last):
-  File ""/home/alpha/Documents/project/fs_jeanPerrin/fap-project/src/modelSansOptimisation.py"", line 1, in <module>
-    from pycsp3 import *
-ModuleNotFoundError: No module named 'pycsp3'"
-data/fap.json,30,optimized,ERROR,-,-,0.01,1,"Traceback (most recent call last):
-  File ""/home/alpha/Documents/project/fs_jeanPerrin/fap-project/src/model.py"", line 1, in <module>
-    from pycsp3 import *
-ModuleNotFoundError: No module named 'pycsp3'"
-data/fap.json,60,optimized,ERROR,-,-,0.01,1,"Traceback (most recent call last):
-  File ""/home/alpha/Documents/project/fs_jeanPerrin/fap-project/src/model.py"", line 1, in <module>
-    from pycsp3 import *
-ModuleNotFoundError: No module named 'pycsp3'"
-data/fap.json,120,optimized,ERROR,-,-,0.01,1,"Traceback (most recent call last):
-  File ""/home/alpha/Documents/project/fs_jeanPerrin/fap-project/src/model.py"", line 1, in <module>
-    from pycsp3 import *
-ModuleNotFoundError: No module named 'pycsp3'"
-data/fap_small.json,30,optimized,ERROR,-,-,0.01,1,"Traceback (most recent call last):
-  File ""/home/alpha/Documents/project/fs_jeanPerrin/fap-project/src/model.py"", line 1, in <module>
-    from pycsp3 import *
-ModuleNotFoundError: No module named 'pycsp3'"
-data/fap_small.json,60,optimized,ERROR,-,-,0.01,1,"Traceback (most recent call last):
-  File ""/home/alpha/Documents/project/fs_jeanPerrin/fap-project/src/model.py"", line 1, in <module>
-    from pycsp3 import *
-ModuleNotFoundError: No module named 'pycsp3'"
-data/fap_small.json,120,optimized,ERROR,-,-,0.01,1,"Traceback (most recent call last):
-  File ""/home/alpha/Documents/project/fs_jeanPerrin/fap-project/src/model.py"", line 1, in <module>
-    from pycsp3 import *
-ModuleNotFoundError: No module named 'pycsp3'"
-data/fap_medium.json,30,optimized,ERROR,-,-,0.01,1,"Traceback (most recent call last):
-  File ""/home/alpha/Documents/project/fs_jeanPerrin/fap-project/src/model.py"", line 1, in <module>
-    from pycsp3 import *
-ModuleNotFoundError: No module named 'pycsp3'"
-data/fap_medium.json,60,optimized,ERROR,-,-,0.01,1,"Traceback (most recent call last):
-  File ""/home/alpha/Documents/project/fs_jeanPerrin/fap-project/src/model.py"", line 1, in <module>
-    from pycsp3 import *
-ModuleNotFoundError: No module named 'pycsp3'"
-data/fap_medium.json,120,optimized,ERROR,-,-,0.01,1,"Traceback (most recent call last):
-  File ""/home/alpha/Documents/project/fs_jeanPerrin/fap-project/src/model.py"", line 1, in <module>
-    from pycsp3 import *
-ModuleNotFoundError: No module named 'pycsp3'"
+data/fap.json,30,feasible,SAT,100,148,13.29,0,
+data/fap.json,60,feasible,SAT,100,148,13.88,0,
+data/fap.json,120,feasible,SAT,100,148,17.88,0,
+data/fap_small.json,30,feasible,SAT,32,114,2.09,0,
+data/fap_small.json,60,feasible,SAT,32,114,2.43,0,
+data/fap_small.json,120,feasible,SAT,32,114,2.64,0,
+data/fap_medium.json,30,feasible,SAT,75,146,7.46,0,
+data/fap_medium.json,60,feasible,SAT,75,146,7.57,0,
+data/fap_medium.json,120,feasible,SAT,75,146,7.30,0,
+data/fap.json,30,optimized,TIMEOUT,-,-,30.07,124,
+data/fap.json,60,optimized,TIMEOUT,-,-,60.09,124,
+data/fap.json,120,optimized,TIMEOUT,-,-,120.13,124,
+data/fap_small.json,30,optimized,TIMEOUT,-,-,30.04,124,
+data/fap_small.json,60,optimized,TIMEOUT,-,-,60.08,124,
+data/fap_small.json,120,optimized,TIMEOUT,-,-,120.19,124,
+data/fap_medium.json,30,optimized,TIMEOUT,-,-,30.11,124,
+data/fap_medium.json,60,optimized,TIMEOUT,-,-,60.10,124,
+data/fap_medium.json,120,optimized,TIMEOUT,-,-,120.14,124,

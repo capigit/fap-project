@@ -2,19 +2,29 @@
 __pycache__/
 *.py[cod]
 *$py.class
+.python-version
 
 # Virtual environments
 venv/
 .venv/
 env/
+.env
+.env.*
 
 # Tooling caches
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.coverage
+htmlcov/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# Packaging/build artifacts
+build/
+dist/
+*.egg-info/
 
 # Logs
 *.log
@@ -22,6 +32,7 @@ solver_*.log
 
 # Generated solver/model artifacts
 *.xml
+*.json.bak
 
 # Report and personal files (not versioned)
 rapport.tex
@@ -54,3 +65,7 @@ cv.tex
 Thumbs.db
 .vscode/
 .idea/
+
+# Local assistant/tooling state
+.agents/
+.codex/

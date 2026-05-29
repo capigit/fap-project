@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FAP - Résultats expérimentaux</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero" aria-labelledby="project-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Programmation par contraintes</p>
+          <h1 id="project-title">Frequency Allocation Problem</h1>
+          <p class="subtitle">Suivi des campagnes PyCSP3 / ACE</p>
+        </div>
+
+        <label class="import-control" title="Importer un fichier CSV">
+          <input id="csv-input" type="file" accept=".csv,text/csv" />
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M12 3v12" />
+            <path d="m7 8 5-5 5 5" />
+            <path d="M5 15v3a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3v-3" />
+          </svg>
+          <span>Importer CSV</span>
+        </label>
+      </section>
+
+      <section class="metric-grid" aria-label="Synthèse des résultats">
+        <article class="metric accent-blue">
+          <span class="metric-label">Exécutions</span>
+          <strong id="metric-runs">-</strong>
+        </article>
+        <article class="metric accent-teal">
+          <span class="metric-label">Instances</span>
+          <strong id="metric-datasets">-</strong>
+        </article>
+        <article class="metric accent-violet">
+          <span class="metric-label">Modèles</span>
+          <strong id="metric-modes">-</strong>
+        </article>
+        <article class="metric accent-slate">
+          <span class="metric-label">Meilleur statut</span>
+          <strong id="metric-status">-</strong>
+        </article>
+      </section>
+
+      <section class="results-panel" aria-label="Résultats détaillés">
+        <div class="section-header">
+          <div>
+            <h2>Résultats expérimentaux</h2>
+            <p id="results-caption">Chargement du jeu de résultats</p>
+          </div>
+          <span class="data-pill" id="data-source">CSV local</span>
+        </div>
+
+        <div id="state-banner" class="state-banner" role="status">
+          Chargement des résultats...
+        </div>
+
+        <div class="table-toolbar" aria-label="Filtres des résultats">
+          <label class="search-field" title="Filtrer les lignes">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m20 20-3.5-3.5" />
+            </svg>
+            <input id="search-input" type="search" placeholder="Instance, statut, modèle" />
+          </label>
+
+          <div class="select-group">
+            <label>
+              <span>Modèle</span>
+              <select id="mode-filter">
+                <option value="">Tous</option>
+                <option value="Faisable">Faisable</option>
+                <option value="Optimisé">Optimisé</option>
+              </select>
+            </label>
+            <label>
+              <span>Statut</span>
+              <select id="status-filter">
+                <option value="">Tous</option>
+                <option value="OPTIMUM">OPTIMUM</option>
+                <option value="SAT">SAT</option>
+                <option value="TIMEOUT">TIMEOUT</option>
+                <option value="UNKNOWN">UNKNOWN</option>
+                <option value="UNSAT">UNSAT</option>
+                <option value="ERROR">ERROR</option>
+              </select>
+            </label>
+          </div>
+
+          <span class="filter-count" id="filter-count">-</span>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Instance</th>
+                <th>Modèle</th>
+                <th>Limite</th>
+                <th>Statut</th>
+                <th>nbFreqDiff</th>
+                <th>maxFreq</th>
+                <th>Temps réel</th>
+              </tr>
+            </thead>
+            <tbody id="results-body"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script src="results.js"></script>
+  </body>
+</html>
